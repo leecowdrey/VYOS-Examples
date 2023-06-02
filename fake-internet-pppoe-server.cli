@@ -1,5 +1,5 @@
 set service pppoe-server access-concentrator 'ACN'
-set service pppoe-server authentication local-users username 'PRODUCTIONHQNUN301070291@fs' password 'Pa33word'
+set service pppoe-server authentication local-users username 'Pa33word' password 'Pa33word'
 set service pppoe-server authentication mode 'local'
 set service pppoe-server client-ip-pool start '10.1.1.100'
 set service pppoe-server client-ip-pool stop '10.1.1.111'

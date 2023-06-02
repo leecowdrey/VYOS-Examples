@@ -90,7 +90,7 @@ set interface ethernet eth1 pppoe 0 name-server none
 set interface ethernet eth1 pppoe 0 mtu 1492
 set interface ethernet eth1 pppoe 0 idle-timeout 0
 set interface ethernet eth1 pppoe 0 name-server none
-set interface ethernet eth1 pppoe 0 user-id PRODUCTIONHQNUN301070291@fs
+set interface ethernet eth1 pppoe 0 user-id Pa33word
 set interface ethernet eth1 pppoe 0 password Pa33word
 set interface ethernet eth1 pppoe 0 firewall in name 'OUTSIDE-IN'
 set interface ethernet eth1 pppoe 0 firewall local name 'OUTSIDE-LOCAL'
