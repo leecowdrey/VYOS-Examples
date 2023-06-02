@@ -9,7 +9,7 @@ virt-install -n vrp \
   --os-type linux \
   --os-variant debian9 \
   --network bridge=br0,model=virtio \
-  --graphics vnc,password=18Dodford,listen=192.168.30.253,port=5908 \
+  --graphics vnc,password=Pa33word,listen=192.168.30.253,port=5908 \
   --hvm \
   --virt-type kvm \
   --disk path=/var/lib/libvirt/images/vrp.qcow2,bus=virtio,size=8 \
@@ -22,7 +22,7 @@ virt-install -n vrs \
   --os-type linux \
   --os-variant debian9 \
   --network bridge=br0,model=virtio \
-  --graphics vnc,password=18Dodford,listen=192.168.30.253,port=5909 \
+  --graphics vnc,password=Pa33word,listen=192.168.30.253,port=5909 \
   --hvm \
   --virt-type kvm \
   --disk path=/var/lib/libvirt/images/vrs.qcow2,bus=virtio,size=8 \
