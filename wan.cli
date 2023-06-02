@@ -184,7 +184,7 @@ set interfaces openvpn vtun0 server topology subnet
 set interfaces openvpn vtun0 openvpn-option 'client-to-client'
 set interfaces openvpn vtun0 openvpn-option 'explicit-exit-notify'
 set interfaces openvpn vtun0 use-lzo-compression
-set interfaces openvpn vtun0 authentication username lee
+set interfaces openvpn vtun0 authentication username someUser
 set interfaces openvpn vtun0 authentication password Pa33word
 set protocols static interface-route 10.8.0.0/24 next-hop-interface vtun0
 #set interfaces openvpn vtun0 ipv6 disable-forwarding
