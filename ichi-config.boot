@@ -440,19 +440,6 @@ system {
         disable-forwarding
         strict-dad
     }
-    login {
-        user vyos {
-            authentication {
-                encrypted-password $6$lHBFou00Gc$6zjJoB4zqGa7lIT6gUy7UfEoG9jjdokszZ20k8LSvBKAz2t5JXP2MBDyYAkxJAJxX2ZJQpNB9xbrZAbT.9rbg/
-                plaintext-password ""
-                public-keys lee@cowdrey.co.uk {
-                    key AAAAB3NzaC1yc2EAAAABIwAAAIEA/fjkk7h5nKfIuztGardI7pIpylXyEdZ+AJK0gI4MmgCxMk+Ob4/8rUs2/ymBklNmFnXZYLHZLcjB2YsXuphJ30W6o569EPVrubXi8lePeiVszZsmW4pWqrzjhErmzZOuoXrOrE/jO4Fgr68aS8Xv8CbhpvvH25LEwKByGG9etLU=
-                    type ssh-rsa
-                }
-            }
-            full-name LC
-        }
-    }
     name-server 208.67.220.220
     name-server 208.67.222.222
     name-server 208.67.222.220
