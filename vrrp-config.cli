@@ -1,0 +1,8 @@
+set high-availability vrrp group CORE health-check script '/config/scripts/vrrp-check.sh'
+set high-availability vrrp group CORE health-check interval 10
+set high-availability vrrp group CORE health-check failure-count 3
+
+set high-availability vrrp group CORE transition-script stop '/config/scripts/vrrp-fail.sh'
+set high-availability vrrp group CORE transition-script backup '/config/scripts/vrrp-fail.sh'
+set high-availability vrrp group CORE transition-script fault '/config/scripts/vrrp-fail.sh'
+set high-availability vrrp group CORE transition-script master '/config/scripts/vrrp-master.sh'

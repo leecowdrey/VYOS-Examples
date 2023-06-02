@@ -1,0 +1,34 @@
+delete interfaces ethernet eth2 firewall in name FROM-CAMERAS
+delete interfaces ethernet eth2 firewall local name FROM-CAMERAS
+delete interfaces ethernet eth2 firewall out name FROM-CAMERAS
+
+delete interfaces ethernet eth2 firewall in name FROM-CAMERAS
+delete interfaces ethernet eth2 firewall local name FROM-CAMERAS
+delete interfaces ethernet eth2 firewall out name FROM-CAMERAS
+delete firewall name FROM-CAMERAS
+set firewall name FROM-CAMERAS default-action drop
+set firewall name FROM-CAMERAS rule 10 action accept
+set firewall name FROM-CAMERAS rule 10 state established 'enable'
+set firewall name FROM-CAMERAS rule 10 state related 'enable'
+set firewall name FROM-CAMERAS rule 20 action accept
+set firewall name FROM-CAMERAS rule 20 protocol udp
+set firewall name FROM-CAMERAS rule 20 source group port-group DHCP
+set firewall name FROM-CAMERAS rule 30 action accept
+set firewall name FROM-CAMERAS rule 30 protocol udp
+set firewall name FROM-CAMERAS rule 30 source group port-group NTP
+set firewall name FROM-CAMERAS rule 40 action accept
+set firewall name FROM-CAMERAS rule 40 protocol vrrp
+set firewall name FROM-CAMERAS rule 40 source address 192.168.20.254
+set firewall name FROM-CAMERAS rule 40 destination address 192.168.20.253
+set interfaces ethernet eth2 firewall local name FROM-CAMERAS
+
+monitor traffic interface eth0 filter 'host 192.168.20.219'
+
+
+delete interfaces ethernet eth2 firewall in name FROM-CAMERAS
+delete interfaces ethernet eth2 firewall local name FROM-CAMERAS
+delete interfaces ethernet eth2 firewall out name FROM-CAMERAS
+set interfaces ethernet eth2 firewall in name FROM-CAMERAS
+
+
+wget https://www.linode.com/docs/assets/695-wget-example.txt

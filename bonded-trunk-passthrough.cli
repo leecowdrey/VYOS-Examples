@@ -1,0 +1,59 @@
+root@lamb:~# cat net-brbond0.xml
+<network>
+  <name>brbond0</name>
+  <forward mode='bridge'/>
+  <bridge name='brbond0' />
+</network>
+
+virsh net-define net-brbond0.xml
+virsh net-autostart brbond0
+virsh net-start brbond0
+virsh net-list
+
+
+    <interface type='network'>
+      <mac address='52:54:00:bd:6b:34'/>
+      <source network='brbond0'/>
+      <model type='virtio'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x08' function='0x0'/>
+    </interface>
+
+    ethernet eth6 {
+        description brbond0-trunk
+        duplex full
+        hw-id 52:54:00:bd:6b:34
+        ipv6 {
+            disable-forwarding
+            dup-addr-detect-transmits 0
+        }
+        smp-affinity auto
+        speed 1000
+        vif 10 {
+            address 192.168.10.2/24
+            ipv6 {
+                disable-forwarding
+                dup-addr-detect-transmits 1
+            }
+        }
+        vif 30 {
+            address 192.168.30.2/24
+            ipv6 {
+                disable-forwarding
+                dup-addr-detect-transmits 1
+            }
+        }
+        vif 40 {
+            address 192.168.40.2/24
+            ipv6 {
+                disable-forwarding
+                dup-addr-detect-transmits 1
+            }
+        }
+        vif 80 {
+            address 192.168.80.2/24
+            ipv6 {
+                disable-forwarding
+                dup-addr-detect-transmits 1
+            }
+        }
+    }

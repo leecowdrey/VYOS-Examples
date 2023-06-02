@@ -1,0 +1,71 @@
+set service dhcp-server shared-network-name OTT authoritative
+set service dhcp-server shared-network-name OTT description 'OTT'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 client-prefix-length '24'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 default-router '192.169.40.1'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 dns-server '208.67.220.220'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 dns-server '208.67.222.222'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 dns-server '208.67.222.220'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 domain-name 'ott.domain.local'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 lease '7200'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 ntp-server '192.169.40.1'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 range 0 start '192.169.40.10'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 range 0 stop '192.169.40.199'
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 static-mapping RE6500-BCD ip-address 192.169.40.60
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 static-mapping RE6500-BCD mac-address 30:23:03:60:6b:cd
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 static-mapping LGTV ip-address 192.169.40.61
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 static-mapping LGTV mac-address b4:e6:2a:8b:e3:24
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 static-mapping SKY-STB ip-address 192.169.40.62
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 static-mapping SKY-STB mac-address 18:28:61:64:42:d8
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 static-mapping FIRETV ip-address 192.169.40.63
+set service dhcp-server shared-network-name OTT subnet 192.169.40.0/24 static-mapping FIRETV mac-address 84:d6:d0:b0:29:65
+
+set service dhcp-server shared-network-name TENTEL authoritative
+set service dhcp-server shared-network-name TENTEL description 'TENTEL'
+set service dhcp-server shared-network-name TENTEL subnet 192.169.10.0/24 client-prefix-length '24'
+set service dhcp-server shared-network-name TENTEL subnet 192.169.10.0/24 default-router '192.169.10.1'
+set service dhcp-server shared-network-name TENTEL subnet 192.169.10.0/24 dns-server '192.169.10.254'
+set service dhcp-server shared-network-name TENTEL subnet 192.169.10.0/24 dns-server '185.228.168.168'
+set service dhcp-server shared-network-name TENTEL subnet 192.169.10.0/24 lease '1800'
+set service dhcp-server shared-network-name TENTEL subnet 192.169.10.0/24 ntp-server '192.169.10.1'
+set service dhcp-server shared-network-name TENTEL subnet 192.169.10.0/24 range 0 start '192.169.10.10'
+set service dhcp-server shared-network-name TENTEL subnet 192.169.10.0/24 range 0 stop '192.169.10.199'
+
+set service dhcp-server shared-network-name CAMERAS authoritative
+set service dhcp-server shared-network-name CAMERAS description CAMERAS
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 domain-name cameras.domain.local
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 ntp-server '192.169.20.1'
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 dns-server '192.169.20.1'
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 default-router '192.169.20.1'
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 client-prefix-length 24
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 lease '14400'
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 range 0 start '192.169.20.100'
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 range 0 stop '192.169.20.199'
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping donkey mac-address 52:54:00:e5:2e:17
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping donkey ip-address 192.169.20.1
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-KITCHEN ip-address 192.169.20.212
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-KITCHEN mac-address e8:ab:fa:06:88:87
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-LANDING ip-address 192.169.20.213
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-LANDING mac-address 54:c4:15:29:78:09
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-GARAGE-OUT ip-address 192.169.20.207
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-GARAGE-OUT mac-address e8:ab:fa:0d:da:c9
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-LOUNGE ip-address 192.169.20.210
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-LOUNGE mac-address e8:ab:fa:04:77:a0
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-PLAYPEN ip-address 192.169.20.209
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-PLAYPEN mac-address e8:ab:fa:04:56:e0
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-GARAGE-IN ip-address 192.169.20.211
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-GARAGE-IN mac-address e8:ab:fa:05:f7:11
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-DRIVE ip-address 192.169.20.214
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-DRIVE mac-address c0:99:15:02:3c:c6
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-PATIO-FRONT ip-address 192.169.20.215
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-PATIO-FRONT mac-address c0:99:b6:d8:a2:e6
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-FRONT-DOOR ip-address 192.169.20.216
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-FRONT-DOOR mac-address c0:99:09:06:69:eb
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-GARAGE-GARDEN ip-address 192.169.20.219
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-GARAGE-GARDEN mac-address 00:9a:35:a5:6f:d8
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-SIDE-DOOR ip-address 192.169.20.217
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-SIDE-DOOR mac-address 00:9a:35:a4:fa:a1
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-PATIO-REAR ip-address 192.169.20.218
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-PATIO-REAR mac-address 00:9a:35:a5:3d:09
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-GARAGE ip-address 192.169.20.211
+set service dhcp-server shared-network-name CAMERAS subnet 192.169.20.0/24 static-mapping IPCAM-GARAGE mac-address 00:62:6e:47:ef:a0
+

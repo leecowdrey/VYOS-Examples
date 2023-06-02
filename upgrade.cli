@@ -1,0 +1,3 @@
+#tftp -r vyos-rolling-latest.iso -l /config/tftpboot/vyos-rolling-latest.iso -g 10.1.1.1
+add system image tftp://10.1.1.1/vyos-rolling-latest.iso
+delete system image 1.2.1

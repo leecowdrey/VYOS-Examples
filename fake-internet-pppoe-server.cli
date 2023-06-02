@@ -1,0 +1,54 @@
+set service pppoe-server access-concentrator 'ACN'
+set service pppoe-server authentication local-users username 'PRODUCTIONHQNUN301070291@fs' password 'Pa33word'
+set service pppoe-server authentication mode 'local'
+set service pppoe-server client-ip-pool start '10.1.1.100'
+set service pppoe-server client-ip-pool stop '10.1.1.111'
+set service pppoe-server interface 'eth0'
+set service pppoe-server local-ip '10.1.1.1'
+
+
+set interfaces ethernet eth0 description 'Internet'
+set interfaces ethernet eth0 duplex 'full'
+set interfaces ethernet eth0 address '10.1.1.1/24'
+set interfaces ethernet eth0 ipv6 disable-forwarding
+set interfaces ethernet eth0 ipv6 dup-addr-detect-transmits '0'
+set interfaces ethernet eth0 smp-affinity 'auto'
+set interfaces ethernet eth0 speed '1000'
+set interfaces loopback lo
+
+set policy
+
+delete service dns forwarding
+
+set system config-management commit-revisions '100'
+set system conntrack expect-table-size '2048'
+set system conntrack hash-size '32768'
+set system conntrack table-size '262144'
+set system console device ttyS0 speed '9600'
+set system disable-dhcp-nameservers
+set system domain-name 'wan.domain.local'
+set system host-name 'vr100'
+set system ipv6 disable
+#
+#delete system login user vyos
+#
+
+delete system ntp
+set system ntp server 192.168.90.1 prefer
+set system ntp server 217.116.122.136
+set system ntp server 217.116.122.137
+set system ntp allow-clients address '10.1.1.0/24'
+set system ntp allow-clients address '192.169.10.0/24'
+set system ntp allow-clients address '192.169.20.0/24'
+set system ntp allow-clients address '192.169.30.0/24'
+set system ntp allow-clients address '192.169.40.0/24'
+set system ntp allow-clients address '192.169.80.0/24'
+set system ntp allow-clients address '192.169.90.0/24'
+set system ntp listen-address '10.1.1.1'
+
+set system options beep-if-fully-booted
+set system options ctrl-alt-del-action 'ignore'
+set system options reboot-on-panic 'true'
+set system syslog global facility all level 'info'
+set system syslog global facility protocols level 'debug'
+set system time-zone 'Europe/London'

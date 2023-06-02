@@ -1,0 +1,65 @@
+auto br10
+iface br10 inet manual
+  bridge_ports none
+  bridge_maxwait 10
+  bridge_stp off
+
+auto br20
+iface br20 inet manual
+  bridge_ports none
+  bridge_maxwait 10
+  bridge_stp off
+
+auto br30
+iface br30 inet manual
+  bridge_ports none
+  bridge_maxwait 10
+  bridge_stp off
+
+auto br40
+iface br40 inet manual
+  bridge_ports none
+  bridge_maxwait 10
+  bridge_stp off
+
+auto br80
+iface br80 inet manual
+  bridge_ports none
+  bridge_maxwait 10
+  bridge_stp off
+
+auto br90
+iface br90 inet manual
+  bridge_ports none
+  bridge_maxwait 10
+  bridge_stp off
+
+auto br100
+iface br100 inet manual
+  bridge_ports none
+  bridge_maxwait 10
+  bridge_stp off
+
+
+brctl addbr br10
+brctl addbr br20
+brctl addbr br30
+brctl addbr br40
+brctl addbr br80
+brctl addbr br90
+brctl addbr br100
+brctl stp br10 off
+brctl stp br20 off
+brctl stp br30 off
+brctl stp br40 off
+brctl stp br80 off
+brctl stp br90 off
+brctl stp br100 off
+
+brctl setmaxage br10 10
+brctl setmaxage br20 10
+brctl setmaxage br30 10
+brctl setmaxage br40 10
+brctl setmaxage br80 10
+brctl setmaxage br90 10
+brctl setmaxage br100 10

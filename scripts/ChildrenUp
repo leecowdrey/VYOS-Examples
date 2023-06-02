@@ -1,0 +1,2 @@
+#/bin/bash
+#ip link set dev bond0.10 up
