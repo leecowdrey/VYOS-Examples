@@ -317,8 +317,8 @@ interfaces {
     }
     pppoe pppoe0 {
         authentication {
-            password HQNPASS301070291
-            user PRODUCTIONHQNUN301070291@fs
+            password SPE3CIALPA33W0RD
+            user ISPUSERID
         }
         default-route auto
         idle-timeout 0
