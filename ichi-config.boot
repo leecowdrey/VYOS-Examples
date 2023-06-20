@@ -333,7 +333,7 @@ interfaces {
             cipher CCMP
             mode wpa2
             wpa {
-                passphrase "c3r3brus"
+                passphrase "SPE3CIALPA33W0RD"
             }
         }
         ssid ICHI
